@@ -1,0 +1,42 @@
+/*  Write a Program to represent Graphs using the Adjacency Matrices and check if it is a 
+    complete graph.
+*/
+
+
+#include <iostream>
+using namespace std;
+
+int arr[100][100];
+int main(){
+    int vertex,edge;
+    cout<<"Enter the No. of Vertices :";
+    cin>>vertex;
+    cout<<"Enter the No. of Edges :";
+    cin>>edge;
+    
+    cout<<"Enter the Adjacent Vertices"<<endl;
+    for(int i=1; i<=edge ;i++){
+        int v1,v2;
+        cin>>v1>>v2;
+        arr[v1][v2]=1;
+        arr[v2][v1]=1;
+    }
+    
+    cout<<"The Matrix for given data is:"<<endl;
+    for(int i=1; i<=vertex ; i++){
+        for(int j=1; j<=vertex ; j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    if(edge == vertex*(vertex-1)/2)
+    {
+       cout<<"The Graph is Complete Graph.";
+    }
+    else
+    {
+        cout<<"The Graph is not Complete." ;
+    }
+    return 0;
+    
+}
