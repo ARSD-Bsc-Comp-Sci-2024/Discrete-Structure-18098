@@ -1,0 +1,21 @@
+/*
+Given a full m-ary tree with i internal vertices.
+Write a Program to find the number of leaf nodes
+*/
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int m,i,n,l;
+    cout<<"Enter the value of m-ary tree (m) : ";
+    cin>>m;
+    cout<<"Enter the no. of internal nodes (i) : ";
+    cin>>i;
+    n=m*i+1;
+    cout<<"\nTotal no. of nodes is : "<<n;
+    l=n-i;
+    cout<<"\n\nHence,\nThe no. of leaf nodes is : "<<l;
+
+    return 0;
+}
