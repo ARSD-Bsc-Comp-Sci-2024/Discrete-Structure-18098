@@ -1,3 +1,46 @@
+// code by me 
+
+
+#include "bits/stdc++.h"
+
+using namespace std;
+
+int fact(int n){
+    if(n==1){
+        return n;
+    }
+    return n*fact(n-1);
+}
+
+int permutation (int n, int r){
+    return fact(n)/fact(n-r);
+}
+
+int combination (int n, int r){
+    return fact(n)/(fact(r)*fact(n-r));
+}
+
+int main()
+{
+    int n,r;
+    cout<<"Enter the value of n : ";
+    cin>>n;
+    cout<<"Enter the value of r :";
+    cin>>r;
+    cout<<"PERMUTATION P("<<n<<", "<<r<<") : ";
+    cout<<permutation(n,r);
+    cout<<endl;
+    cout<<"COMBINATION C("<<n<<", "<<r<<") : ";
+    cout<<combination(n,r);
+    return 0;
+}
+
+
+
+
+
+// code by jarvis
+
 #include<iostream>
 
 using namespace std;
