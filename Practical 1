@@ -1,3 +1,74 @@
+// code by me
+
+#include "bits/stdc++.h"
+
+using namespace std;
+
+bool isMember(int arr[],int n,int a){
+    for(int i=0;i<n;i++){
+        if(a==arr[i]){
+            return true;
+        }
+    }
+    return false;
+}
+void powerSet(int arr[],int n){
+    int num=pow(2,n);
+    cout<<"\nPower set :-\nP(A)={";
+    for (int i = 0; i < num; i++)
+    {
+        cout<<"(";
+        for (int j = 0; j < n; j++)
+        {
+            if(i&(1<<j)){
+                cout<<arr[j]<<" ";
+            }
+        }
+        cout<<") ";
+        
+    }
+    cout<<"}";
+    
+}
+
+int main()
+{
+    cout<<"Enter the no of elemenets : ";
+    int size;
+    cin>>size;
+    int arr [size];
+    cout<<"Enter the elements of array : ";
+    for(int i=0;i<size;i++){
+        cin>>arr[i];
+    }
+    cout<<"\nCardinality of array is : "<<size<<endl;
+    cout<<"Enter the element to be searched : ";
+    int key;
+    cin>>key;
+    cout<<endl;
+    if(isMember(arr,size,key)){
+        cout<<key<<" is present in given array .";
+    }
+    else{
+        cout<<key<<" is not present in given array .";
+    }
+
+    powerSet(arr,size);
+
+
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+// code by jarvis
+
 #include <iostream>
 #include <math.h>
 #include <iomanip>
